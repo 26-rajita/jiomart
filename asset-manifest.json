@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/webdev-starter-materialUI/static/css/main.af840fbd.chunk.css",
+    "main.js": "/webdev-starter-materialUI/static/js/main.73610ac7.chunk.js",
+    "main.js.map": "/webdev-starter-materialUI/static/js/main.73610ac7.chunk.js.map",
+    "runtime-main.js": "/webdev-starter-materialUI/static/js/runtime-main.f7d80913.js",
+    "runtime-main.js.map": "/webdev-starter-materialUI/static/js/runtime-main.f7d80913.js.map",
+    "static/js/2.ee3877a3.chunk.js": "/webdev-starter-materialUI/static/js/2.ee3877a3.chunk.js",
+    "static/js/2.ee3877a3.chunk.js.map": "/webdev-starter-materialUI/static/js/2.ee3877a3.chunk.js.map",
+    "index.html": "/webdev-starter-materialUI/index.html",
+    "static/css/main.af840fbd.chunk.css.map": "/webdev-starter-materialUI/static/css/main.af840fbd.chunk.css.map",
+    "static/js/2.ee3877a3.chunk.js.LICENSE.txt": "/webdev-starter-materialUI/static/js/2.ee3877a3.chunk.js.LICENSE.txt",
+    "static/media/logo.355735b3.svg": "/webdev-starter-materialUI/static/media/logo.355735b3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f7d80913.js",
+    "static/js/2.ee3877a3.chunk.js",
+    "static/css/main.af840fbd.chunk.css",
+    "static/js/main.73610ac7.chunk.js"
+  ]
+}
