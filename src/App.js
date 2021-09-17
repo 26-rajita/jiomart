@@ -5,6 +5,7 @@ import Home from './Pages/Home.js'
 import Gallery from './Pages/Gallery.js'
 import PrimarySearchAppBar from './Components/Jiomart components/Searchappbar';
 import Signup from './Pages/Signup';
+import Links from './Components/Jiomart components/Footerlinks';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
       </Switch>
 
       <footer className="App-footer">
-        This is a footer
+      <Links/>
       </footer>
     </div>
   );

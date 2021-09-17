@@ -14,20 +14,31 @@ export default function ContainedButtons() {
   const classes = useStyles();
 
   return (
+    
     <div className={classes.root}>
-      <Button variant="contained">Default</Button>
-      <Button variant="contained" color="primary">
-        Primary
+    <Button variant="contained" color="secondary">
+        Grocery
       </Button>
       <Button variant="contained" color="secondary">
-        Secondary
+        Home & Kitchen
       </Button>
-      <Button variant="contained" disabled>
-        Disabled
+      <Button variant="contained" color="secondary">
+        Fashion
+      </Button>
+      <Button variant="contained"  color="secondary">
+        Jwellery
+      </Button>
+        <Button variant="contained"  color="secondary">
+        Beauty
       </Button>
       <Button variant="contained" color="primary" href="#contained-buttons">
-        Link
+        Electronics
       </Button>
+      <Button variant="contained" color="primary" href="#contained-buttons">
+        Medicine
+      </Button>
+
     </div>
+    
   );
 }

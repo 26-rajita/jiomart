@@ -14,6 +14,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import TemporaryDrawer from './bottomdrawer';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -116,8 +117,10 @@ export default function PrimarySearchAppBar() {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+    
+      <TemporaryDrawer/>
     </Menu>
+
   );
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
@@ -130,7 +133,9 @@ export default function PrimarySearchAppBar() {
       transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
+  
     >
+  
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="secondary">
@@ -169,9 +174,13 @@ export default function PrimarySearchAppBar() {
             edge="start"
             className={classes.menuButton}
             color="inherit"
+            
             aria-label="open drawer"
+          
           >
-            <MenuIcon />
+          
+            <MenuIcon /> 
+            
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             JioMart
