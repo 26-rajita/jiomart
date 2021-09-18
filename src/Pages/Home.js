@@ -9,11 +9,12 @@ import FloatingActionButtons from '../Components/Navigationbuttons';
 import SimpleBottomNavigation from '../Components/navigations';
 import IconBreadcrumbs from '../Components/Breadcrumbs';
 import RadioButtonsGroup from '../Components/Radio';
-import IconButtons from '../Components/Jiomart components/categories';
+import IconButtons from '../Components/Jiomart components/Left Drawer';
 import MediaCard from '../Components/Jiomart components/card';
 import FullWidthGrid from '../Components/grid';
 import SwipeableTextMobileStepper from '../Components/Jiomart components/Carousel';
 import ImgMediaCard from '../Components/Jiomart components/Cards';
+import { CardHeader } from '@material-ui/core';
 
 export default function Home() {
   return (
@@ -23,7 +24,9 @@ export default function Home() {
           <ContainedButtons />
           <SwipeableTextMobileStepper/>
           <SwipeableTextMobileStepper/>
-          <ImgMediaCard/>
+          <SwipeableTextMobileStepper/>
+          <FullWidthGrid/>
+          <MediaCard/>
           <SwipeableTextMobileStepper/>
         </p>
 

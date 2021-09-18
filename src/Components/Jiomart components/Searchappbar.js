@@ -15,6 +15,8 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import TemporaryDrawer from './bottomdrawer';
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import SwipeableTemporaryDrawer from './Left Drawer';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -135,23 +137,15 @@ export default function PrimarySearchAppBar() {
       onClose={handleMobileMenuClose}
   
     >
-  
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="secondary">
-            <MailIcon />
+            <ShoppingCartOutlinedIcon />
           </Badge>
         </IconButton>
-        <p>Messages</p>
+        <p>My cart</p>
       </MenuItem>
-      <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
+      
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -170,15 +164,17 @@ export default function PrimarySearchAppBar() {
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
+        <SwipeableTemporaryDrawer/>
           <IconButton
+          
             edge="start"
             className={classes.menuButton}
             color="inherit"
             
             aria-label="open drawer"
-          
+            
           >
-          
+           
             <MenuIcon /> 
             
           </IconButton>
@@ -188,6 +184,7 @@ export default function PrimarySearchAppBar() {
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
+               
             </div>
             <InputBase
               placeholder="Search…"
@@ -202,14 +199,10 @@ export default function PrimarySearchAppBar() {
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
-                <MailIcon />
+                <ShoppingCartOutlinedIcon />
               </Badge>
             </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
+           
             <IconButton
               edge="end"
               aria-label="account of current user"
@@ -219,6 +212,7 @@ export default function PrimarySearchAppBar() {
               color="inherit"
             >
               <AccountCircle />
+            
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>
@@ -230,8 +224,9 @@ export default function PrimarySearchAppBar() {
               color="inherit"
             >
               <MoreIcon />
-            </IconButton>
+            </IconButton> 
           </div>
+          
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
