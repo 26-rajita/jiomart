@@ -5,6 +5,7 @@ import Home from './Pages/Home.js'
 import Gallery from './Pages/Gallery.js'
 import PrimarySearchAppBar from './Components/Jiomart components/Searchappbar';
 import Signup from './Pages/Signup';
+import Login from './Pages/Login';
 import Links from './Components/Jiomart components/Footerlinks';
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route path={process.env.PUBLIC_URL + '/home'} > <Home /> </Route>
         <Route path={process.env.PUBLIC_URL + '/gallery'}  > <Gallery /> </Route>
         <Route path={process.env.PUBLIC_URL + '/signup'}  > <Signup /> </Route>
+        <Route path={process.env.PUBLIC_URL + '/Login'}  > <Login/> </Route>
       </Switch>
 
       <footer className="App-footer">
