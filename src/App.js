@@ -3,10 +3,10 @@ import ButtonAppBar from './Components/AppBar.js'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Pages/Home.js'
 import Gallery from './Pages/Gallery.js'
-import PrimarySearchAppBar from './Components/Jiomart components/Searchappbar';
+import PrimarySearchAppBar from './Components/Homepage.js/Searchappbar';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
-import Links from './Components/Jiomart components/Footerlinks';
+import Links from './Components/Homepage.js/Footerlinks';
 
 
 function App() {

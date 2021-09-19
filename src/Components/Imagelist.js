@@ -11,6 +11,7 @@ import image2 from '../Assets/Oreo.jpg'
 import image3 from '../Assets/Oats.jpg'
 import image4 from '../Assets/Santoor soap.jpg'
 import image5 from '../Assets/PringlesScorchin_Lead.jpg'
+import BasicButtonGroup from './Homepage.js/buttongroup';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -98,6 +99,7 @@ export default function SingleLineImageList() {
               actionIcon={
                 <IconButton aria-label={`star ${item.title}`}>
                   <StarBorderIcon className={classes.title} />
+                  <BasicButtonGroup/>
                 </IconButton>
               }
             />
@@ -115,6 +117,7 @@ export default function SingleLineImageList() {
               actionIcon={
                 <IconButton aria-label={`star ${item.title}`}>
                   <StarBorderIcon className={classes.title} />
+                  <BasicButtonGroup/>
                 </IconButton>
               }
             />
@@ -132,6 +135,7 @@ export default function SingleLineImageList() {
               actionIcon={
                 <IconButton aria-label={`star ${item.title}`}>
                   <StarBorderIcon className={classes.title} />
+                  <BasicButtonGroup/>
                 </IconButton>
               }
             />
@@ -149,6 +153,7 @@ export default function SingleLineImageList() {
               actionIcon={
                 <IconButton aria-label={`star ${item.title}`}>
                   <StarBorderIcon className={classes.title} />
+                  <BasicButtonGroup/>
                 </IconButton>
               }
             />
@@ -166,6 +171,7 @@ export default function SingleLineImageList() {
               actionIcon={
                 <IconButton aria-label={`star ${item.title}`}>
                   <StarBorderIcon className={classes.title} />
+                  <BasicButtonGroup/>
                 </IconButton>
               }
             />

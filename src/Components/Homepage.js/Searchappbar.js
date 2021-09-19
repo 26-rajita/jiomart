@@ -11,8 +11,6 @@ import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import MailIcon from '@material-ui/icons/Mail';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import TemporaryDrawer from './bottomdrawer';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
@@ -119,8 +117,8 @@ export default function PrimarySearchAppBar() {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-    
-      <TemporaryDrawer/>
+
+      <TemporaryDrawer />
     </Menu>
 
   );
@@ -135,7 +133,7 @@ export default function PrimarySearchAppBar() {
       transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
-  
+
     >
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
@@ -145,7 +143,7 @@ export default function PrimarySearchAppBar() {
         </IconButton>
         <p>My cart</p>
       </MenuItem>
-      
+
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -164,19 +162,19 @@ export default function PrimarySearchAppBar() {
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
-        <SwipeableTemporaryDrawer/>
+          <SwipeableTemporaryDrawer />
           <IconButton
-          
+
             edge="start"
             className={classes.menuButton}
             color="inherit"
-            
+
             aria-label="open drawer"
-            
+
           >
-           
-            <MenuIcon /> 
-            
+
+            <MenuIcon />
+
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             JioMart
@@ -184,7 +182,7 @@ export default function PrimarySearchAppBar() {
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
-               
+
             </div>
             <InputBase
               placeholder="Search…"
@@ -202,7 +200,7 @@ export default function PrimarySearchAppBar() {
                 <ShoppingCartOutlinedIcon />
               </Badge>
             </IconButton>
-           
+
             <IconButton
               edge="end"
               aria-label="account of current user"
@@ -212,7 +210,7 @@ export default function PrimarySearchAppBar() {
               color="inherit"
             >
               <AccountCircle />
-            
+
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>
@@ -224,9 +222,9 @@ export default function PrimarySearchAppBar() {
               color="inherit"
             >
               <MoreIcon />
-            </IconButton> 
+            </IconButton>
           </div>
-          
+
         </Toolbar>
       </AppBar>
       {renderMobileMenu}

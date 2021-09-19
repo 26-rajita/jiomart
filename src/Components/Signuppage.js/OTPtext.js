@@ -20,8 +20,8 @@ export default function LayoutTextFields() {
   return (
     <div className={classes.root}>
       <div>
-        
-        
+
+
         <TextField
           label="OTP"
           id="outlined-margin-normal"
@@ -29,30 +29,30 @@ export default function LayoutTextFields() {
           className={classes.textField}
           margin="normal"
           variant="outlined"
-        /> 
+        />
         <TextField
-        id="outlined-margin-normal"
-        defaultValue="*"
-        className={classes.textField}
-        margin="normal"
-        variant="outlined"
-      />
-      <TextField
-        id="outlined-margin-normal"
-        defaultValue="*"
-        className={classes.textField}
-        margin="normal"
-        variant="outlined"
-      />
+          id="outlined-margin-normal"
+          defaultValue="*"
+          className={classes.textField}
+          margin="normal"
+          variant="outlined"
+        />
         <TextField
-        id="outlined-margin-normal"
-        defaultValue="*"
-        className={classes.textField}
-        helperText="Insert OTP required"
-        margin="normal"
-        variant="outlined"
-      />
-        
+          id="outlined-margin-normal"
+          defaultValue="*"
+          className={classes.textField}
+          margin="normal"
+          variant="outlined"
+        />
+        <TextField
+          id="outlined-margin-normal"
+          defaultValue="*"
+          className={classes.textField}
+          helperText="Insert OTP required"
+          margin="normal"
+          variant="outlined"
+        />
+
       </div>
     </div>
   );

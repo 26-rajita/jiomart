@@ -2,7 +2,7 @@ import React from 'react';
 import { createTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { green, purple } from '@material-ui/core/colors';
-
+//This verify button is used to complete the process of login / signup //
 const BootstrapButton = withStyles({
   root: {
     boxShadow: 'none',

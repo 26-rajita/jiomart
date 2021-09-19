@@ -1,9 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import Grid from '@material-ui/core/Grid';
-
+// The login details are filled in this text field//
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
