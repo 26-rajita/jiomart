@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/jiomart/static/css/main.af840fbd.chunk.css",
-    "main.js": "/jiomart/static/js/main.4668e737.chunk.js",
-    "main.js.map": "/jiomart/static/js/main.4668e737.chunk.js.map",
+    "main.js": "/jiomart/static/js/main.c42005ef.chunk.js",
+    "main.js.map": "/jiomart/static/js/main.c42005ef.chunk.js.map",
     "runtime-main.js": "/jiomart/static/js/runtime-main.69c655b2.js",
     "runtime-main.js.map": "/jiomart/static/js/runtime-main.69c655b2.js.map",
-    "static/js/2.7af9d6a0.chunk.js": "/jiomart/static/js/2.7af9d6a0.chunk.js",
-    "static/js/2.7af9d6a0.chunk.js.map": "/jiomart/static/js/2.7af9d6a0.chunk.js.map",
+    "static/js/2.58dbb1ec.chunk.js": "/jiomart/static/js/2.58dbb1ec.chunk.js",
+    "static/js/2.58dbb1ec.chunk.js.map": "/jiomart/static/js/2.58dbb1ec.chunk.js.map",
     "index.html": "/jiomart/index.html",
     "static/css/main.af840fbd.chunk.css.map": "/jiomart/static/css/main.af840fbd.chunk.css.map",
-    "static/js/2.7af9d6a0.chunk.js.LICENSE.txt": "/jiomart/static/js/2.7af9d6a0.chunk.js.LICENSE.txt",
+    "static/js/2.58dbb1ec.chunk.js.LICENSE.txt": "/jiomart/static/js/2.58dbb1ec.chunk.js.LICENSE.txt",
     "static/media/Oats.a4c35374.jpg": "/jiomart/static/media/Oats.a4c35374.jpg",
     "static/media/Oreo.4771496d.jpg": "/jiomart/static/media/Oreo.4771496d.jpg",
     "static/media/PringlesScorchin_Lead.75da9aec.jpg": "/jiomart/static/media/PringlesScorchin_Lead.75da9aec.jpg",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.69c655b2.js",
-    "static/js/2.7af9d6a0.chunk.js",
+    "static/js/2.58dbb1ec.chunk.js",
     "static/css/main.af840fbd.chunk.css",
-    "static/js/main.4668e737.chunk.js"
+    "static/js/main.c42005ef.chunk.js"
   ]
 }
