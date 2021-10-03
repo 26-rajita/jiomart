@@ -20,7 +20,9 @@ img {
   border-radius: 45px 45px 45px 45px;
   
 }
-
+.Paper {
+  background-color: #07ffd6; 
+}
 
 .App-footer {
   background-color: #07ffd6;

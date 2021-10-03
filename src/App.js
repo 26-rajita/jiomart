@@ -6,6 +6,7 @@ import PrimarySearchAppBar from './Components/Homepage.js/Searchappbar';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import Links from './Components/Homepage.js/Footerlinks';
+import Paper from '@material-ui/core/Paper';
 
 
 function App() {
@@ -24,11 +25,15 @@ function App() {
         <Route path={process.env.PUBLIC_URL + '/signup'}  > <Signup /> </Route>
         <Route path={process.env.PUBLIC_URL + '/Login'}  > <Login/> </Route>
       </Switch>
-
-      <footer className="App-footer">
+     
+      {/* <footer className="App-footer">
       <Links/>
-      </footer>
+      </footer> */}
+       <Paper className="Paper">
+        
+      </Paper>
     </div>
+    
   );
 }
 

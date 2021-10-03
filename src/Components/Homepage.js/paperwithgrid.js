@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import NestedGrid from './footer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,9 +22,10 @@ export default function CenteredGrid() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>xs=12</Paper>
+          <Paper className={classes.paper}>
+            <NestedGrid />
+          </Paper>
         </Grid>
-       
       </Grid>
     </div>
   );

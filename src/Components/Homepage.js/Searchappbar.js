@@ -15,10 +15,12 @@ import TemporaryDrawer from './bottomdrawer';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import Grid from '@material-ui/core/Grid';
 import LeftDrawer from './Left Drawer';
+// import Logo from '../../Assets/Logo.png'
+
 
 const useStyles = makeStyles((theme) => ({
-  
- 
+
+
   grow: {
     flexGrow: 1,
   },
@@ -26,9 +28,9 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(0),
   },
   title: {
-    
+
     display: 'none',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.down('xl')]: {
       display: 'block',
     },
   },
@@ -43,12 +45,12 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 0,
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      marginLeft: theme.spacing(3),
+      marginLeft: theme.spacing(20),
       width: 'auto',
     },
   },
   searchIcon: {
-    padding: theme.spacing(0, 2),
+    padding: theme.spacing(0, 1),
     height: '100%',
     position: 'absolute',
     pointerEvents: 'none',
@@ -60,42 +62,44 @@ const useStyles = makeStyles((theme) => ({
     color: 'inherit',
   },
   inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
+    padding: theme.spacing(1, 2, 1, 1),
     // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+    paddingLeft: `calc(1em + ${theme.spacing(6)}px)`,
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '20ch',
+      width: '50ch',
     },
   },
   sectionDesktop: {
     display: 'none',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
+      width: '50ch',
     },
   },
   sectionMobile: {
     display: 'flex',
     [theme.breakpoints.up('md')]: {
       display: 'none',
-      
-      
-      
+      width: '50ch',
+
+
+
     },
   },
 }));
 
+
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
+
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
-  const isMenuOpen = Boolean(anchorEl);
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
 
   const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
+
   };
 
   const handleMobileMenuClose = () => {
@@ -103,7 +107,7 @@ export default function PrimarySearchAppBar() {
   };
 
   const handleMenuClose = () => {
-    setAnchorEl(null);
+
     handleMobileMenuClose();
   };
 
@@ -111,135 +115,46 @@ export default function PrimarySearchAppBar() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-  const menuId = 'primary-search-account-menu';
-  const renderMenu = ( 
+  function FormRow() {
+    const menuId = 'primary-search-account-menu';
 
 
-    <Grid item xs={4} md={12}>
-      <Menu
-        anchorEl={anchorEl}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        id={menuId}
-        keepMounted
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-        open={isMenuOpen}
-        onClose={handleMenuClose}
-      >
-
-       
-      </Menu>
-    </Grid>
-  );
-
-  const mobileMenuId = 'primary-search-account-menu-mobile';
-  const renderMobileMenu = (
-    <Grid container spacing={100}>
-  <Grid container item spacing={3}>
-    
-  
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-
-    >
-      
-      
-      <Grid item xs={1} md={3}>
-        <MenuItem>
-          <IconButton aria-label="show 4 new mails" color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <ShoppingCartOutlinedIcon />
-            </Badge>
-          </IconButton>
-          <p>My cart</p>
-        </MenuItem>
-      </Grid>
-      
+    const mobileMenuId = 'primary-search-account-menu-mobile';
 
 
-    </Menu>
-    
-    </Grid>
-    
-    </Grid>
-  );
 
+    return (
 
-  return (
-    <div className={classes.grow}>
-      <AppBar position="static" minHeight= "400" >
-        <Toolbar 
-        >
-          
-        
-          <IconButton
-
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-
-            aria-label="open drawer"
-
+      <div className={classes.grow}>
+        <AppBar position="static" minHeight="400" >
+          <Toolbar
           >
-           <LeftDrawer />
-            
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="open drawer"
+            >
+              <LeftDrawer />
+            </IconButton>
 
-          </IconButton>
-          <Grid item xs={1} sm={3}>
+
             <div>
               <Typography className={classes.title} variant="h6" noWrap>
                 JioMart
               </Typography>
+              {/* <img src = {jio-mart-logo} className= "image" alt= "Logo"/> */}
             </div>
-          </Grid>
-          <Grid item xs={1} sm={3}>
-          <div>
 
-          
-            <IconButton
-              
-              color="inherit"
-            >
-              
-              <TemporaryDrawer />
 
-            </IconButton>
-           
-
-            <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <ShoppingCartOutlinedIcon />
-              </Badge>
-            </IconButton>
-          </div>
-          </Grid>
-          <Grid item xs={1} sm={3}>
-          <div className={classes.sectionMobile}>
-            <IconButton
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </div>
-          </Grid>
-          <Grid item xs={4} md={12}>
             <div className={classes.search}>
-              <div className={classes.searchIcon} 
+              <div className={classes.searchIcon}
               >
                 <SearchIcon />
 
               </div>
               <InputBase
-                placeholder="Search…"
+                placeholder="Search essentials..."
                 classes={{
                   root: classes.inputRoot,
                   input: classes.inputInput,
@@ -251,12 +166,37 @@ export default function PrimarySearchAppBar() {
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
             </div>
-          </Grid>
 
-        </Toolbar>
-      </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
+
+            <div>
+              <IconButton
+                color="inherit"
+              >
+                <TemporaryDrawer />
+              </IconButton>
+            </div>
+
+            <div>
+              <IconButton aria-label="show 4 new mails" color="inherit">
+                <Badge badgeContent={4} color="secondary">
+                  <ShoppingCartOutlinedIcon />
+                </Badge>
+              </IconButton>
+            </div>
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+  }
+  return (
+    <div className={classes.root}>
+      <Grid container spacing={1}>
+        <Grid container item xs={12} spacing={1}>
+          <FormRow />
+        </Grid>
+
+      </Grid>
     </div>
+
   );
 }
