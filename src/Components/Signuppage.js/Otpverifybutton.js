@@ -2,7 +2,7 @@ import React from 'react';
 import { createTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { green, purple } from '@material-ui/core/colors';
-import { Link, Router } from "react-router-dom";
+
 //This verify button is used to complete the process of login / signup //
 const BootstrapButton = withStyles({
   root: {
@@ -64,16 +64,16 @@ const theme = createTheme({
   },
 });
 
-export default function CustomizedButtons() {
+export default function OTPButtons() {
   const classes = useStyles();
 
   return (
     <div>
-       <Link to={process.env.PUBLIC_URL + '/signup'}>
-      <ColorButton variant="contained" color="primary" href="" className={classes.margin}>
+      
+      <ColorButton variant="contained" color="primary"  className={classes.margin}>
         Verify
       </ColorButton>
-      </Link>
+     
     </div>
   );
 }

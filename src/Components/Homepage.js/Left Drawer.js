@@ -11,7 +11,6 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
 
-
 //This Drawer is used to display menu in the hamburger menu//
 const useStyles = makeStyles({
   list: {

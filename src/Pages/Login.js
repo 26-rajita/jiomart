@@ -4,6 +4,7 @@ import CustomizedButtons from '../Components/Signuppage.js/Verifybutton';
 import LayoutTextFields from '../Components/Signuppage.js/OTPtext';
 import ButtonLink from '../Components/Signuppage.js/Resendlink';
 import ColorTextFields from '../Components/Loginpage.js/Logintext';
+import OTPButtons from '../Components/Signuppage.js/Otpverifybutton';
 //After home page comes the signup page to create account //
 export default function Signup() {
   return (
@@ -12,11 +13,10 @@ export default function Signup() {
           <p>
             Login
             <ColorTextFields/>
-            <CustomizedButtons/>
+            <OTPButtons/>
             <LayoutTextFields/>
             <ButtonLink/>
             <CustomizedButtons/>
-           
             </p>
         </Container>
     </React.Fragment>
