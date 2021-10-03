@@ -2,8 +2,11 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import ContainedButtons from '../Components/Homepage.js/buttons';
 import FullWidthGrid from '../Components/Homepage.js/grid';
-import SwipeableTextMobileStepper from '../Components/Homepage.js/Carousel';
+import SwipeableTextMobileStepper from '../Components/Homepage.js/Carousel 1';
 import SingleLineImageList from '../Components/Imagelist';
+import Carousel2 from '../Components/Homepage.js/Carousel 2';
+import Carousel3 from '../Components/Homepage.js/Carousel 3';
+import Carousel4 from '../Components/Homepage.js/Carousel 4';
 //Task flow starts the home page by clicking on the acount icon//
 
 
@@ -15,14 +18,19 @@ export default function Home() {
         <p>
           <ContainedButtons />
           <SwipeableTextMobileStepper />
-          <SwipeableTextMobileStepper />
-          <SwipeableTextMobileStepper />
+          <Carousel2/>
+          <Carousel3/>
           <FullWidthGrid />
           <SingleLineImageList />
-          <SwipeableTextMobileStepper />
+          <Carousel4/>
+          
         </p>
 
       </Container>
+      
+      
     </React.Fragment>
+    
   );
+  
 }

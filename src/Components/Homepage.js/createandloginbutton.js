@@ -69,7 +69,7 @@ export default function CreateaccountButtons() {
   return (
     <div class= "text-center">
       <ColorButton variant="contained" color="primary"  Center Aligned className={classes.margin}>
-        Verify
+        Create New Account
       </ColorButton>
     </div>
   );

@@ -18,7 +18,7 @@ export default function Links() {
 
   return (
     <Typography className={classes.root}>
-      <Link href="#" onClick={preventDefault}>
+      <Link color='secondary' href="#" onClick={preventDefault}>
         Customer service
       </Link>
       <Link href="#" onClick={preventDefault}>

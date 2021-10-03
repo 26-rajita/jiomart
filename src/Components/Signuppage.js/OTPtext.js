@@ -4,13 +4,13 @@ import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
+    display: 'center',
     flexWrap: 'wrap',
   },
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: '25ch',
+    width: '6ch',
   },
 }));
 
@@ -48,10 +48,12 @@ export default function LayoutTextFields() {
           id="outlined-margin-normal"
           defaultValue="*"
           className={classes.textField}
-          helperText="Insert OTP required"
+          helperText=""
           margin="normal"
           variant="outlined"
+          
         />
+       
 
       </div>
     </div>

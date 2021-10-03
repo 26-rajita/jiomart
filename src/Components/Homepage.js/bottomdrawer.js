@@ -8,21 +8,26 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import {Link, Router} from "react-router-dom";
-
+import { Link, Router } from "react-router-dom";
 import CreateaccountButtons from './createandloginbutton';
+import Bottomdrawerbutton from './BottomdrawerButton';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+
 //Thid drawer is used for signup popup//
 const useStyles = makeStyles({
- 
+
 
 
   list: {
     width: 250,
+    alignItems: 'center',
+    textAlign: 'center',
   },
   fullList: {
     width: 'auto',
-    textAlign: 'center',
     
+     
+
   },
 
 });
@@ -30,7 +35,7 @@ const useStyles = makeStyles({
 export default function TemporaryDrawer() {
   const classes = useStyles();
   const [state, setState] = React.useState({
-    
+
     left: false,
     bottom: false,
 
@@ -66,23 +71,19 @@ export default function TemporaryDrawer() {
           </Grid>
         </Grid>
 
-        <Grid item xs= {12} sm={12}>
-        <ListItem>
+        
+          <ListItem>
 
-        <Link to={process.env.PUBLIC_URL + '/signup'}>
-       <CreateaccountButtons variant="contained" color="primary"  href="">
-        Create New account
-      </CreateaccountButtons> 
-      
-      
-      
-
-      </Link>
-        </ListItem>
-        </Grid>
+            <Link to={process.env.PUBLIC_URL + '/signup'}>
+              <CreateaccountButtons variant="contained" color="primary" href="">
+                Create New account
+              </CreateaccountButtons>
+            </Link>
+          </ListItem>
+        
       </List>
       <Divider />
-      
+
       <Grid container spacing={12}>
         <Grid item md={12}>
           <Paper className={classes.paper}> Already have an account ? Login into your existing account </Paper>
@@ -91,11 +92,11 @@ export default function TemporaryDrawer() {
       <List>
         <ListItem>
 
-      <Link to={process.env.PUBLIC_URL + '/Login'}>
-      <Button variant="contained" color="primary" href="">
-        Login
-      </Button>
-      </Link>
+          <Link to={process.env.PUBLIC_URL + '/Login'}>
+            <Button variant="contained" color="primary" href="">
+              Login
+            </Button>
+          </Link>
         </ListItem>
       </List>
     </div>
@@ -106,7 +107,8 @@ export default function TemporaryDrawer() {
 
       {['bottom'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor} Sign up / Login</Button>
+         <AccountCircle onClick={toggleDrawer(anchor, true)}>{anchor}</AccountCircle>
+ 
 
           <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
             {list(anchor)}

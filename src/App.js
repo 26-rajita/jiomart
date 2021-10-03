@@ -14,8 +14,6 @@ function App() {
       {/* Header (Navigation Bar) */}
       <header className="App-header">
         <PrimarySearchAppBar />
-
-
       </header>
 
       {/* Router - Pages */}

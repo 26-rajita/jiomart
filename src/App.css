@@ -7,12 +7,23 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  color: white;
+  
+  color: rgb(250, 249, 249);
+  
+ 
+  background-color: #F1F1F1;
+  text-align: center;
+  
+
+}
+img {
+  border-radius: 45px 45px 45px 45px;
+  
 }
 
+
 .App-footer {
-  background-color: #282c34;
+  background-color: #07ffd6;
   color: white;
   position: fixed;
   left: 0;

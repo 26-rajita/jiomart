@@ -8,26 +8,27 @@ import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import TemporaryDrawer from './bottomdrawer';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-import SwipeableTemporaryDrawer from './Left Drawer';
 import Grid from '@material-ui/core/Grid';
+import LeftDrawer from './Left Drawer';
 
 const useStyles = makeStyles((theme) => ({
   
+ 
   grow: {
     flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(10),
+    marginRight: theme.spacing(0),
   },
   title: {
+    
     display: 'none',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       display: 'block',
     },
   },
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
     marginLeft: 0,
     width: '100%',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       marginLeft: theme.spacing(3),
       width: 'auto',
     },
@@ -78,6 +79,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     [theme.breakpoints.up('md')]: {
       display: 'none',
+      
+      
+      
     },
   },
 }));
@@ -108,10 +112,10 @@ export default function PrimarySearchAppBar() {
   };
 
   const menuId = 'primary-search-account-menu';
-  const renderMenu = (
+  const renderMenu = ( 
 
 
-    <Grid item xs={3} sm={3}>
+    <Grid item xs={4} md={12}>
       <Menu
         anchorEl={anchorEl}
         anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
@@ -121,16 +125,18 @@ export default function PrimarySearchAppBar() {
         open={isMenuOpen}
         onClose={handleMenuClose}
       >
-        <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
 
-        <TemporaryDrawer />
+       
       </Menu>
     </Grid>
   );
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
-    <Grid item xs={12} sm={12}>
+    <Grid container spacing={100}>
+  <Grid container item spacing={3}>
+    
+  
     <Menu
       anchorEl={mobileMoreAnchorEl}
       anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
@@ -141,21 +147,9 @@ export default function PrimarySearchAppBar() {
       onClose={handleMobileMenuClose}
 
     >
-
-      <Grid item xs={3} sm={3}>
-        <MenuItem onClick={handleProfileMenuOpen}>
-          <IconButton
-            aria-label="account of current user"
-            aria-controls="primary-search-account-menu"
-            aria-haspopup="true"
-            color="inherit"
-          >
-            <AccountCircle />
-          </IconButton>
-          <p>Profile</p>
-        </MenuItem>
-      </Grid>
-      <Grid item xs={3} sm={3}>
+      
+      
+      <Grid item xs={1} md={3}>
         <MenuItem>
           <IconButton aria-label="show 4 new mails" color="inherit">
             <Badge badgeContent={4} color="secondary">
@@ -165,9 +159,13 @@ export default function PrimarySearchAppBar() {
           <p>My cart</p>
         </MenuItem>
       </Grid>
+      
 
 
     </Menu>
+    
+    </Grid>
+    
     </Grid>
   );
 
@@ -178,7 +176,7 @@ export default function PrimarySearchAppBar() {
         <Toolbar 
         >
           
-          <SwipeableTemporaryDrawer />
+        
           <IconButton
 
             edge="start"
@@ -188,30 +186,27 @@ export default function PrimarySearchAppBar() {
             aria-label="open drawer"
 
           >
-
-            <MenuIcon />
+           <LeftDrawer />
+            
 
           </IconButton>
-          <Grid item xs={3} sm={3}>
+          <Grid item xs={1} sm={3}>
             <div>
               <Typography className={classes.title} variant="h6" noWrap>
                 JioMart
               </Typography>
             </div>
           </Grid>
-          <Grid item xs={3} sm={3}>
+          <Grid item xs={1} sm={3}>
           <div>
 
           
             <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
+              
               color="inherit"
             >
-              <AccountCircle />
+              
+              <TemporaryDrawer />
 
             </IconButton>
            
@@ -223,7 +218,7 @@ export default function PrimarySearchAppBar() {
             </IconButton>
           </div>
           </Grid>
-          <Grid item xs={3} sm={3}>
+          <Grid item xs={1} sm={3}>
           <div className={classes.sectionMobile}>
             <IconButton
               aria-label="show more"
@@ -236,9 +231,10 @@ export default function PrimarySearchAppBar() {
             </IconButton>
           </div>
           </Grid>
-          <Grid item xs={12} md={12}>
+          <Grid item xs={4} md={12}>
             <div className={classes.search}>
-              <div className={classes.searchIcon}>
+              <div className={classes.searchIcon} 
+              >
                 <SearchIcon />
 
               </div>
@@ -247,6 +243,7 @@ export default function PrimarySearchAppBar() {
                 classes={{
                   root: classes.inputRoot,
                   input: classes.inputInput,
+                  position: 'bottm',
                 }}
                 inputProps={{ 'aria-label': 'search' }}
               />

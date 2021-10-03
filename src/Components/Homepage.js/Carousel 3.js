@@ -8,61 +8,57 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-//Carousels are used for displaying offers//
-
-
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-
 const tutorialSteps = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
+   
     imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://cdn1.dealsmagnet.com/images/external/jiomart-icicibank-offer-16wpThcr-2.jpeg?url=https://i.imgur.com/hN62UBg.png',
   },
   {
-    label: 'Bird',
+    
     imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://www.jiomart.com/images/cms/offers/1615917760_web_lp.jpg',
   },
   {
-    label: 'Bali, Indonesia',
+   
     imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+      'https://www.jiomart.com/images/cms/offers/1598523525_web_landing_page.jpg',
   },
   {
-    label: 'NeONBRAND Digital Marketing, Las Vegas, United States',
+    
     imgPath:
-      'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://www.jiomart.com/images/cms/offers/1628786598_SBI_Credit_card__web_lp.jpg',
   },
   {
-    label: 'Goč, Serbia',
+   
     imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+    'https://1.bp.blogspot.com/-D4VhG5gF-pA/X3X0ds1dtaI/AAAAAAAAFNE/VPIz8dZUUCshl14_2_zQhqcAIVoSTqFeQCLcBGAsYHQ/s562/Citibank%2BPaytm%2BWallet%2BOffer.jpg',
   },
 ];
 
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 400,
-    flexGrow: 2,
+    flexGrow: 1,
   },
   header: {
     display: 'flex',
     alignItems: 'center',
     height: 50,
-    paddingLeft: theme.spacing(8),
+    paddingLeft: theme.spacing(4),
     backgroundColor: theme.palette.background.default,
   },
   img: {
     height: 255,
-    display: 'block',
     maxWidth: 400,
     overflow: 'hidden',
+    display: 'block',
     width: '100%',
   },
 }));
 
-function SwipeableTextMobileStepper() {
+export default function Carousel3() {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
@@ -75,16 +71,17 @@ function SwipeableTextMobileStepper() {
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
-
   const handleStepChange = (step) => {
     setActiveStep(step);
   };
+
 
   return (
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
         <Typography>{tutorialSteps[activeStep].label}</Typography>
       </Paper>
+      
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -99,27 +96,26 @@ function SwipeableTextMobileStepper() {
           </div>
         ))}
       </AutoPlaySwipeableViews>
-      <MobileStepper
-        steps={maxSteps}
-        position="static"
-        variant="text"
 
-        activeStep={activeStep}
-        nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-            Next
-            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-          </Button>
-        }
-        backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-            Back
-          </Button>
+      <MobileStepper
+       variant="dots"
+       steps={5}
+       position="static"
+       activeStep={activeStep}
+       className={classes.root}
+       nextButton={
+         <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
+           
+           {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+         </Button>
+       }
+       backButton={
+         <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+           {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+           
+         </Button>
         }
       />
     </div>
   );
 }
-
-export default SwipeableTextMobileStepper;

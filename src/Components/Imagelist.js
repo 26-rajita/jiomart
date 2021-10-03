@@ -97,10 +97,9 @@ export default function SingleLineImageList() {
                 title: classes.title,
               }}
               actionIcon={
-                <IconButton aria-label={`star ${item.title}`}>
-                  <StarBorderIcon className={classes.title} />
+               
                   <BasicButtonGroup/>
-                </IconButton>
+               
               }
             />
           </ImageListItem>
@@ -115,10 +114,9 @@ export default function SingleLineImageList() {
                 title: classes.title,
               }}
               actionIcon={
-                <IconButton aria-label={`star ${item.title}`}>
-                  <StarBorderIcon className={classes.title} />
+                
                   <BasicButtonGroup/>
-                </IconButton>
+                
               }
             />
           </ImageListItem>
@@ -133,10 +131,9 @@ export default function SingleLineImageList() {
                 title: classes.title,
               }}
               actionIcon={
-                <IconButton aria-label={`star ${item.title}`}>
-                  <StarBorderIcon className={classes.title} />
+               
                   <BasicButtonGroup/>
-                </IconButton>
+               
               }
             />
           </ImageListItem>
@@ -151,10 +148,10 @@ export default function SingleLineImageList() {
                 title: classes.title,
               }}
               actionIcon={
-                <IconButton aria-label={`star ${item.title}`}>
-                  <StarBorderIcon className={classes.title} />
+               
+                  
                   <BasicButtonGroup/>
-                </IconButton>
+               
               }
             />
           </ImageListItem>
@@ -169,10 +166,9 @@ export default function SingleLineImageList() {
                 title: classes.title,
               }}
               actionIcon={
-                <IconButton aria-label={`star ${item.title}`}>
-                  <StarBorderIcon className={classes.title} />
+               
                   <BasicButtonGroup/>
-                </IconButton>
+               
               }
             />
           </ImageListItem>

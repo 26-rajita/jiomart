@@ -3,6 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import EmailRoundedIcon from '@material-ui/icons/EmailRounded';
+import LocationOnRoundedIcon from '@material-ui/icons/LocationOnRounded';
+import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
+import PersonRoundedIcon from '@material-ui/icons/PersonRounded';
 
 //All the signup details will be filled in this text field//
 const useStyles = makeStyles((theme) => ({
@@ -19,30 +23,30 @@ export default function InputWithIcon() {
       <div className={classes.margin}>
         <Grid container spacing={1} alignItems="flex-end">
           <Grid item xs={12} sm={12}>
-            <AccountCircle />
+            <PersonRoundedIcon />
             <TextField id="input-with-icon-grid" label="Name" />
           </Grid>
         </Grid>
         <Grid container spacing={1} alignItems="flex-end">
           <Grid item xs={12} sm={12}>
-            <AccountCircle />
+            <PersonRoundedIcon />
             <TextField id="input-with-icon-grid" label="Surname" />
           </Grid>
         </Grid>
         <Grid container spacing={1} alignItems="flex-end">
           <Grid item xs={12} sm={12}>
-            <AccountCircle />
+            <LocationOnRoundedIcon/>
             <TextField id="input-with-icon-grid" label="Enter pincode" />
           </Grid>
           <Grid container spacing={1} alignItems="flex-end">
           <Grid item xs={12} sm={12}>
-            <AccountCircle />
+            < EmailRoundedIcon/>
             <TextField id="input-with-icon-grid" label="Email ID" />
           </Grid>
         </Grid>
         <Grid container spacing={1} alignItems="flex-end">
           <Grid item xs={12} sm={12}>
-            <AccountCircle />
+            <PhoneIphoneIcon/>
             <TextField id="input-with-icon-grid" label="Phone number" />
           </Grid>
         </Grid>
