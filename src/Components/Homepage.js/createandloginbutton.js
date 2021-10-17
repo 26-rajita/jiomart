@@ -11,7 +11,7 @@ const BootstrapButton = withStyles({
     padding: '6px 12px',
     border: '1px solid',
     lineHeight: 1.5,
-    backgroundColor: '#0063cc',
+    backgroundColor: '#07ffd6',
     borderColor: '#0063cc',
     fontFamily: [
       '-apple-system',
@@ -26,13 +26,13 @@ const BootstrapButton = withStyles({
       '"Segoe UI Symbol"',
     ].join(','),
     '&:hover': {
-      backgroundColor: '#0069d9',
+      backgroundColor: '#21DFA8',
       borderColor: '#0062cc',
       boxShadow: 'none',
     },
     '&:active': {
       boxShadow: 'none',
-      backgroundColor: '#0062cc',
+      backgroundColor: '#21DFA8',
       borderColor: '#005cbf',
     },
     '&:focus': {
@@ -43,10 +43,10 @@ const BootstrapButton = withStyles({
 
 const ColorButton = withStyles((theme) => ({
   root: {
-    color: theme.palette.getContrastText(purple[500]),
-    backgroundColor: purple[500],
+    color: theme.palette.getContrastText('#21DFA8'),
+    backgroundColor: '#21DFA8',
     '&:hover': {
-      backgroundColor: purple[700],
+      backgroundColor: '#21DFA8',
     },
   },
 }))(Button);

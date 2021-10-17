@@ -2,7 +2,6 @@ import React from 'react';
 import { createTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { green, purple } from '@material-ui/core/colors';
-import { Link, Router } from "react-router-dom";
 //This verify button is used to complete the process of login / signup //
 const BootstrapButton = withStyles({
   root: {
@@ -11,9 +10,8 @@ const BootstrapButton = withStyles({
     fontSize: 16,
     padding: '6px 12px',
     border: '1px solid',
-  
     lineHeight: 1.5,
-    backgroundColor: '#0063cc',
+    backgroundColor: '#07ffd6',
     borderColor: '#0063cc',
     fontFamily: [
       '-apple-system',
@@ -28,13 +26,13 @@ const BootstrapButton = withStyles({
       '"Segoe UI Symbol"',
     ].join(','),
     '&:hover': {
-      backgroundColor: '#0069d9',
+      backgroundColor: '#21DFA8',
       borderColor: '#0062cc',
       boxShadow: 'none',
     },
     '&:active': {
       boxShadow: 'none',
-      backgroundColor: '#0062cc',
+      backgroundColor: '#21DFA8',
       borderColor: '#005cbf',
     },
     '&:focus': {
@@ -45,7 +43,7 @@ const BootstrapButton = withStyles({
 
 const ColorButton = withStyles((theme) => ({
   root: {
-    color: theme.palette.getContrastText(purple[500]),
+    color: theme.palette.getContrastText('#21DFA8'),
     backgroundColor: '#21DFA8',
     '&:hover': {
       backgroundColor: '#21DFA8',
@@ -65,16 +63,14 @@ const theme = createTheme({
   },
 });
 
-export default function CustomizedButtons() {
+export default function LoginButtons() {
   const classes = useStyles();
 
   return (
-    <div>
-       <Link to={process.env.PUBLIC_URL + '/Home'}>
-      <ColorButton variant="contained" color="#21DFA8" href="" className={classes.margin}>
-        Verify
+    <div class= "text-center">
+      <ColorButton variant="contained" color="primary"  Center Aligned className={classes.margin}>
+        Login
       </ColorButton>
-      </Link>
     </div>
   );
 }

@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       {/* Header (Navigation Bar) */}
-      <header className="App-header">
+      <header className="AppBar">
         <PrimarySearchAppBar />
       </header>
 

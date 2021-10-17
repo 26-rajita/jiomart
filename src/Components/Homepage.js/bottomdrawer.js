@@ -12,6 +12,7 @@ import { Link, Router } from "react-router-dom";
 import CreateaccountButtons from './createandloginbutton';
 import Bottomdrawerbutton from './BottomdrawerButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import LoginButtons from './Loginbutton';
 
 //Thid drawer is used for signup popup//
 const useStyles = makeStyles({
@@ -25,6 +26,12 @@ const useStyles = makeStyles({
   },
   fullList: {
     width: 'auto',
+    alignItems: 'center',
+
+    paper: { 
+      alignItems: 'center',
+      textAlign: 'center',
+    }
     
      
 
@@ -75,7 +82,7 @@ export default function TemporaryDrawer() {
           <ListItem>
 
             <Link to={process.env.PUBLIC_URL + '/signup'}>
-              <CreateaccountButtons variant="contained" color="primary" href="">
+              <CreateaccountButtons variant="contained" color='#21DFA8' href="">
                 Create New account
               </CreateaccountButtons>
             </Link>
@@ -93,9 +100,9 @@ export default function TemporaryDrawer() {
         <ListItem>
 
           <Link to={process.env.PUBLIC_URL + '/Login'}>
-            <Button variant="contained" color="primary" href="">
+            <LoginButtons variant="contained" color="primary" href="">
               Login
-            </Button>
+            </LoginButtons>
           </Link>
         </ListItem>
       </List>

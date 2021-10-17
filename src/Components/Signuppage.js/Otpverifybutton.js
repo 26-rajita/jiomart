@@ -45,9 +45,9 @@ const BootstrapButton = withStyles({
 const ColorButton = withStyles((theme) => ({
   root: {
     color: theme.palette.getContrastText(purple[500]),
-    backgroundColor: purple[500],
+    backgroundColor: '#21DFA8',
     '&:hover': {
-      backgroundColor: purple[700],
+      backgroundColor: '#21DFA8',
     },
   },
 }))(Button);

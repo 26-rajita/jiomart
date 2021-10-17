@@ -11,21 +11,31 @@
   color: rgb(250, 249, 249);
   
  
-  background-color: #F1F1F1;
+  background-color: #07f7e3;
   text-align: center;
   
 
+}
+ #grad {
+  background-image: linear-gradient(rgb(0, 204, 255), yellow);
+
+}
+
+
+.Button 
+{
+  border-radius: 45px 45px 45px 45px;
 }
 img {
   border-radius: 45px 45px 45px 45px;
   
 }
 .Paper {
-  background-color: #07ffd6; 
+  background-color: #07ffc9; 
 }
 
 .App-footer {
-  background-color: #07ffd6;
+  background-color: #07c5ff;
   color: white;
   position: fixed;
   left: 0;
