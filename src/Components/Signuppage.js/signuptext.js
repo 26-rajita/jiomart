@@ -13,6 +13,13 @@ const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(1),
   },
+
+  object: {
+    width: '100%',
+  },
+
+
+
 }));
 
 export default function InputWithIcon() {
@@ -21,35 +28,46 @@ export default function InputWithIcon() {
   return (
     <div>
       <div className={classes.margin}>
+
         <Grid container spacing={1} alignItems="flex-end">
-          <Grid item xs={12} sm={12}>
+          <Grid item xs={1} sm={1}>
             <PersonRoundedIcon />
-            <TextField id="input-with-icon-grid" label="Name" />
+          </Grid>
+          <Grid item xs={11} sm={11}>
+            <TextField className={classes.object} id="input-with-icon-grid" label="Name" />
           </Grid>
         </Grid>
         <Grid container spacing={1} alignItems="flex-end">
-          <Grid item xs={12} sm={12}>
+          <Grid item xs={1} sm={1}>
             <PersonRoundedIcon />
-            <TextField id="input-with-icon-grid" label="Surname" />
+          </Grid>
+          <Grid item xs={11} sm={11}>
+            <TextField className={classes.object} id="input-with-icon-grid" label="Surname" />
           </Grid>
         </Grid>
         <Grid container spacing={1} alignItems="flex-end">
-          <Grid item xs={12} sm={12}>
-            <LocationOnRoundedIcon/>
-            <TextField id="input-with-icon-grid" label="Enter pincode" />
+          <Grid item xs={1} sm={1}>
+            <LocationOnRoundedIcon />
+          </Grid>
+          <Grid item xs={11} sm={11}>
+            <TextField className={classes.object} id="input-with-icon-grid" label="Enter pincode" />
           </Grid>
           <Grid container spacing={1} alignItems="flex-end">
-          <Grid item xs={12} sm={12}>
-            < EmailRoundedIcon/>
-            <TextField id="input-with-icon-grid" label="Email ID" />
+            <Grid item xs={1} sm={1}>
+              < EmailRoundedIcon />
+            </Grid>
+            <Grid item xs={11} sm={11}>
+              <TextField className={classes.object} id="input-with-icon-grid" label="Email ID" />
+            </Grid>
           </Grid>
-        </Grid>
-        <Grid container spacing={1} alignItems="flex-end">
-          <Grid item xs={12} sm={12}>
-            <PhoneIphoneIcon/>
-            <TextField id="input-with-icon-grid" label="Phone number" />
+          <Grid container spacing={1} alignItems="flex-end">
+            <Grid item xs={1} sm={1}>
+              <PhoneIphoneIcon />
+            </Grid>
+            <Grid item xs={11} sm={11}>
+              <TextField className={classes.object} id="input-with-icon-grid" label="Phone number" />
+            </Grid>
           </Grid>
-        </Grid>
         </Grid>
       </div>
     </div>

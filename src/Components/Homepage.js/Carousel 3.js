@@ -11,49 +11,50 @@ import { autoPlay } from 'react-swipeable-views-utils';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const tutorialSteps = [
   {
-   
+
     imgPath:
       'https://cdn1.dealsmagnet.com/images/external/jiomart-icicibank-offer-16wpThcr-2.jpeg?url=https://i.imgur.com/hN62UBg.png',
   },
   {
-    
+
     imgPath:
       'https://www.jiomart.com/images/cms/offers/1615917760_web_lp.jpg',
   },
   {
-   
+
     imgPath:
       'https://www.jiomart.com/images/cms/offers/1598523525_web_landing_page.jpg',
   },
   {
-    
+
     imgPath:
       'https://www.jiomart.com/images/cms/offers/1628786598_SBI_Credit_card__web_lp.jpg',
   },
   {
-   
+
     imgPath:
-    'https://1.bp.blogspot.com/-D4VhG5gF-pA/X3X0ds1dtaI/AAAAAAAAFNE/VPIz8dZUUCshl14_2_zQhqcAIVoSTqFeQCLcBGAsYHQ/s562/Citibank%2BPaytm%2BWallet%2BOffer.jpg',
+      'https://1.bp.blogspot.com/-D4VhG5gF-pA/X3X0ds1dtaI/AAAAAAAAFNE/VPIz8dZUUCshl14_2_zQhqcAIVoSTqFeQCLcBGAsYHQ/s562/Citibank%2BPaytm%2BWallet%2BOffer.jpg',
   },
 ];
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 400,
+    maxWidth: 1200,
     flexGrow: 1,
   },
   header: {
     display: 'flex',
     alignItems: 'center',
-    height: 50,
+    height: 0,
     paddingLeft: theme.spacing(4),
     backgroundColor: theme.palette.background.default,
+    margin: 10,
   },
   img: {
-    height: 255,
-    maxWidth: 400,
-    overflow: 'hidden',
+    height: '100%',
     display: 'block',
+    maxWidth: 1200,
+    overflow: 'hidden',
     width: '100%',
   },
 }));
@@ -81,7 +82,7 @@ export default function Carousel3() {
       <Paper square elevation={0} className={classes.header}>
         <Typography>{tutorialSteps[activeStep].label}</Typography>
       </Paper>
-      
+
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -98,22 +99,22 @@ export default function Carousel3() {
       </AutoPlaySwipeableViews>
 
       <MobileStepper
-       variant="dots"
-       steps={5}
-       position="static"
-       activeStep={activeStep}
-       className={classes.root}
-       nextButton={
-         <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
-           
-           {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-         </Button>
-       }
-       backButton={
-         <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-           {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-           
-         </Button>
+        variant="dots"
+        steps={5}
+        position="static"
+        activeStep={activeStep}
+        className={classes.root}
+        nextButton={
+          <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
+
+            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+          </Button>
+        }
+        backButton={
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+
+          </Button>
         }
       />
     </div>

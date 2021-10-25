@@ -22,46 +22,46 @@ export default function NestedGrid() {
     return (
       <React.Fragment>
         <Grid item xs={4}>
-        <Link color='Inherit' href="#" onClick={preventDefault}>
-        Customer service
-      </Link>
+          <Link color='Inherit' href="#" onClick={preventDefault}>
+            Customer service
+          </Link>
         </Grid>
         <Grid item xs={4}>
           <Link color='Inherit' href="#" onClick={preventDefault}>
-        Need Help
-      </Link>
+            Need Help
+          </Link>
         </Grid>
         <Grid item xs={4}>
-        <Link  color='Inherit' href="#" onClick={preventDefault}>
-        About us
-      </Link>
+          <Link color='Inherit' href="#" onClick={preventDefault}>
+            About us
+          </Link>
         </Grid>
         <Grid item xs={4}>
-        <Link  color='Inherit' href="#" onClick={preventDefault}>
-        FAQ
-      </Link>
+          <Link color='Inherit' href="#" onClick={preventDefault}>
+            FAQ
+          </Link>
         </Grid>
         <Grid item xs={4}>
-        <Link color='Inherit' href="#" onClick={preventDefault}>
-        Terms and conditions
-      </Link>
+          <Link color='Inherit' href="#" onClick={preventDefault}>
+            Terms and conditions
+          </Link>
         </Grid>
         <Grid item xs={4}>
-        <Link color='Inherit'  href="#" onClick={preventDefault}>
-        Privacy policy
-      </Link>
+          <Link color='Inherit' href="#" onClick={preventDefault}>
+            Privacy policy
+          </Link>
         </Grid>
         <Grid item xs={4}>
-        <Link color='Inherit' href="#" onClick={preventDefault}>
-        E-Waste policy
-      </Link>
+          <Link color='Inherit' href="#" onClick={preventDefault}>
+            E-Waste policy
+          </Link>
         </Grid>
         <Grid item xs={4}>
-        <Link color='Inherit' href="#" onClick={preventDefault}>
-        Contact us
-      </Link>
+          <Link color='Inherit' href="#" onClick={preventDefault}>
+            Contact us
+          </Link>
         </Grid>
-         
+
       </React.Fragment>
     );
   }
@@ -72,7 +72,7 @@ export default function NestedGrid() {
         <Grid container item xs={12} spacing={3}>
           <FormRow />
         </Grid>
-       
+
       </Grid>
     </div>
   );

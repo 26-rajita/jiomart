@@ -19,58 +19,58 @@ export default function Links() {
   const preventDefault = (event) => event.preventDefault();
 
   return (
-    
+
     <div className={classes.root}>
-    <Grid container spacing={1}>
-         
-    
-    <Typography className={classes.root}>
-    <Grid item xs={3} sm={3} md={3}>
-      <Link color='secondary' href="#" onClick={preventDefault}>
-        Customer service
-      </Link>
+      <Grid container spacing={1}>
+
+
+        <Typography className={classes.root}>
+          <Grid item xs={3} sm={3} md={3}>
+            <Link color='secondary' href="#" onClick={preventDefault}>
+              Customer service
+            </Link>
+          </Grid>
+          <Grid item xs={3} sm={3} md={3}>
+            <Link href="#" onClick={preventDefault}>
+              Need Help
+            </Link>
+          </Grid>
+          <Grid item xs={3} sm={3} md={3}>
+            <Link href="#" onClick={preventDefault}>
+              About us
+            </Link>
+          </Grid>
+          <Grid item xs={4} sm={4} md={3}>
+            <Link href="#" onClick={preventDefault}>
+              FAQ
+            </Link>
+          </Grid>
+          <Grid item xs={4} sm={4} md={3}>
+            <Link href="#" onClick={preventDefault}>
+              Terms and conditions
+            </Link>
+          </Grid>
+          <Grid item xs={4} sm={4} md={3}>
+            <Link href="#" onClick={preventDefault}>
+              Privacy policy
+            </Link>
+          </Grid>
+          <Grid item xs={4} sm={4} md={3}>
+            <Link href="#" onClick={preventDefault}>
+              E-Waste policy
+            </Link>
+          </Grid>
+          <Grid item xs={4} sm={4} md={3}>
+            <Link href="#" onClick={preventDefault}>
+              Contact us
+            </Link>
+          </Grid>
+
+        </Typography>
       </Grid>
-      <Grid item xs={3} sm={3} md={3}>
-      <Link href="#" onClick={preventDefault}>
-        Need Help
-      </Link>
-      </Grid>
-      <Grid item xs={3} sm={3} md={3}>
-      <Link href="#" onClick={preventDefault}>
-        About us
-      </Link>
-      </Grid>
-      <Grid item xs={4} sm={4} md={3}>
-      <Link href="#" onClick={preventDefault}>
-        FAQ
-      </Link>
-      </Grid>
-      <Grid item xs={4} sm={4}  md={3}>
-      <Link href="#" onClick={preventDefault}>
-        Terms and conditions
-      </Link>
-      </Grid>
-      <Grid item xs={4} sm={4} md={3}>
-      <Link href="#" onClick={preventDefault}>
-        Privacy policy
-      </Link>
-      </Grid>
-      <Grid item xs={4} sm={4} md={3}>
-      <Link href="#" onClick={preventDefault}>
-        E-Waste policy
-      </Link>
-      </Grid>
-      <Grid item xs={4} sm={4} md={3}>
-      <Link href="#" onClick={preventDefault}>
-        Contact us
-      </Link>
-      </Grid>
-      
-    </Typography>
-    </Grid>
     </div>
-    
-   
-   
+
+
+
   );
 }

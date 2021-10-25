@@ -19,12 +19,12 @@ export default function BasicButtonGroup() {
 
   return (
     <div className={classes.root}>
-      
+
       <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
         <Button>Add</Button>
-       
+
       </ButtonGroup>
-      
+
     </div>
   );
 }

@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translateZ(0)',
   },
   title: {
-    color: theme.palette.primary.light,
+    color: 'White',
   },
   titleBar: {
     background:
@@ -37,50 +37,50 @@ const useStyles = makeStyles((theme) => ({
 
 
 
- 
- 
- 
-  const itemData = [
-    {
+
+
+
+const itemData = [
+  {
     img: image,
-     title: 'Image',
+    title: 'soft toy        Rs 500',
     author: 'author',
-    },
-   
-  ];
-  const itemData2 = [
-    {
+  },
+
+];
+const itemData2 = [
+  {
     img2: image2,
-     title: 'Image',
+    title: 'Oreo family pack  Rs 200',
     author: 'author',
-    },
-   
-  ];
-  const itemData3 = [
-    {
+  },
+
+];
+const itemData3 = [
+  {
     img3: image3,
-     title: 'Image',
+    title: 'Saffola oats  Rs 500',
     author: 'author',
-    },
-   
-  ];
-  const itemData4 = [
-    {
+  },
+
+];
+const itemData4 = [
+  {
     img3: image4,
-     title: 'Image',
+    title: 'Image',
     author: 'author',
-    },
-   
-  ];
-  const itemData5 = [
-    {
+  },
+
+];
+const itemData5 = [
+  {
     img3: image5,
-     title: 'Image',
+    title: 'image',
     author: 'author',
-    },
-   
-  ];
- 
+  },
+
+];
+
 export default function SingleLineImageList() {
   const classes = useStyles();
 
@@ -97,9 +97,9 @@ export default function SingleLineImageList() {
                 title: classes.title,
               }}
               actionIcon={
-               
-                  <BasicButtonGroup/>
-               
+
+                <BasicButtonGroup />
+
               }
             />
           </ImageListItem>
@@ -114,9 +114,9 @@ export default function SingleLineImageList() {
                 title: classes.title,
               }}
               actionIcon={
-                
-                  <BasicButtonGroup/>
-                
+
+                <BasicButtonGroup />
+
               }
             />
           </ImageListItem>
@@ -131,9 +131,9 @@ export default function SingleLineImageList() {
                 title: classes.title,
               }}
               actionIcon={
-               
-                  <BasicButtonGroup/>
-               
+
+                <BasicButtonGroup />
+
               }
             />
           </ImageListItem>
@@ -148,10 +148,10 @@ export default function SingleLineImageList() {
                 title: classes.title,
               }}
               actionIcon={
-               
-                  
-                  <BasicButtonGroup/>
-               
+
+
+                <BasicButtonGroup />
+
               }
             />
           </ImageListItem>
@@ -166,14 +166,14 @@ export default function SingleLineImageList() {
                 title: classes.title,
               }}
               actionIcon={
-               
-                  <BasicButtonGroup/>
-               
+
+                <BasicButtonGroup />
+
               }
             />
           </ImageListItem>
         ))}
-        
+
       </ImageList>
     </div>
   );

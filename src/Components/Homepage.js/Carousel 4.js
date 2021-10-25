@@ -11,50 +11,51 @@ import { autoPlay } from 'react-swipeable-views-utils';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const tutorialSteps = [
   {
-   
+
     imgPath:
-    'https://www.jiomart.com/images/cms/aw_rbslider/slides/1633087998_Sale-live-now-756-x-325-Apporoved-1_oct.jpg' ,
+      'https://www.jiomart.com/images/cms/aw_rbslider/slides/1633087998_Sale-live-now-756-x-325-Apporoved-1_oct.jpg',
   },
   {
-    
+
     imgPath:
-      
+
       'https://dog55574plkkx.cloudfront.net/images/jiomart-grocery-offers.jpg',
   },
   {
-   
+
     imgPath:
       'https://cdn.grabon.in/gograbon/images/web-images/uploads/1618551213743/jiomart-offers.jpg',
   },
   {
-    
+
     imgPath:
       'https://trickunlimited.com/wp-content/uploads/2020/07/Jiomart-Offers-1.jpeg',
   },
   {
-   
+
     imgPath:
-    'https://1.bp.blogspot.com/-VcTLEWdZRj8/X6ppOG415hI/AAAAAAAAH5Y/CqHkRahtVGQtJmpxFY2K9JRxGAzVvfNrACLcBGAsYHQ/s1440/0-bannerD.jpg',
+      'https://1.bp.blogspot.com/-VcTLEWdZRj8/X6ppOG415hI/AAAAAAAAH5Y/CqHkRahtVGQtJmpxFY2K9JRxGAzVvfNrACLcBGAsYHQ/s1440/0-bannerD.jpg',
   },
 ];
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 400,
+    maxWidth: 1200,
     flexGrow: 1,
   },
   header: {
     display: 'flex',
     alignItems: 'center',
-    height: 50,
+    height: 0,
     paddingLeft: theme.spacing(4),
     backgroundColor: theme.palette.background.default,
+    margin: 10,
   },
   img: {
-    height: 255,
-    maxWidth: 400,
-    overflow: 'hidden',
+    height: '100%',
     display: 'block',
+    maxWidth: 1200,
+    overflow: 'hidden',
     width: '100%',
   },
 }));
@@ -82,7 +83,7 @@ export default function Carousel4() {
       <Paper square elevation={0} className={classes.header}>
         <Typography>{tutorialSteps[activeStep].label}</Typography>
       </Paper>
-      
+
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -99,22 +100,22 @@ export default function Carousel4() {
       </AutoPlaySwipeableViews>
 
       <MobileStepper
-       variant="dots"
-       steps={5}
-       position="static"
-       activeStep={activeStep}
-       className={classes.root}
-       nextButton={
-         <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
-           
-           {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-         </Button>
-       }
-       backButton={
-         <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-           {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-           
-         </Button>
+        variant="dots"
+        steps={5}
+        position="static"
+        activeStep={activeStep}
+        className={classes.root}
+        nextButton={
+          <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
+
+            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+          </Button>
+        }
+        backButton={
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+
+          </Button>
         }
       />
     </div>

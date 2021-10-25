@@ -11,7 +11,12 @@ const BootstrapButton = withStyles({
     fontSize: 16,
     padding: '6px 12px',
     border: '1px solid',
-  
+    margin: {
+      height: '50%',
+      width: '50%',
+    },
+
+
     lineHeight: 1.5,
     backgroundColor: '#0063cc',
     borderColor: '#0063cc',
@@ -56,6 +61,8 @@ const ColorButton = withStyles((theme) => ({
 const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(1),
+    height: '50%',
+    width: '50%',
   },
 }));
 
@@ -70,10 +77,10 @@ export default function CustomizedButtons() {
 
   return (
     <div>
-       <Link to={process.env.PUBLIC_URL + '/Home'}>
-      <ColorButton variant="contained" color="#21DFA8" href="" className={classes.margin}>
-        Verify
-      </ColorButton>
+      <Link to={process.env.PUBLIC_URL + '/Home'}>
+        <ColorButton variant="contained" color="#21DFA8" href="" className={classes.margin}>
+          Verify
+        </ColorButton>
       </Link>
     </div>
   );

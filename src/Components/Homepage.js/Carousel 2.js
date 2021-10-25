@@ -11,27 +11,27 @@ import { autoPlay } from 'react-swipeable-views-utils';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const tutorialSteps = [
   {
-   
+
     imgPath:
       'http://educratsweb.com/l.php?url=https://www.jiomart.com/images/cms/aw_rbslider/slides/1590177884_491551662.jpg',
   },
   {
-    
+
     imgPath:
       'https://www.jiomart.com/images/cms/aw_rbslider/slides/1590178009_491491289.jpg',
   },
   {
-   
+
     imgPath:
       'https://www.jiomart.com/images/cms/aw_rbslider/slides/1590172163_490915877.jpg',
   },
   {
-    
+
     imgPath:
       'https://www.jiomart.com/images/cms/aw_rbslider/slides/1589896887_banner_07.jpg',
   },
   {
-   
+
     imgPath:
       'https://www.jiomart.com/images/cms/aw_rbslider/slides/1590172121_490249971.jpg',
   },
@@ -39,22 +39,24 @@ const tutorialSteps = [
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 400,
+    maxWidth: 1200,
     flexGrow: 1,
   },
   header: {
     display: 'flex',
     alignItems: 'center',
-    height: 50,
+    height: 0,
     paddingLeft: theme.spacing(4),
     backgroundColor: theme.palette.background.default,
+    margin: 10,
   },
   img: {
-    height: 255,
-    maxWidth: 400,
-    overflow: 'hidden',
+    height: '100%',
     display: 'block',
+    maxWidth: 1200,
+    overflow: 'hidden',
     width: '100%',
+
   },
 }));
 
@@ -81,7 +83,7 @@ export default function Carousel2() {
       <Paper square elevation={0} className={classes.header}>
         <Typography>{tutorialSteps[activeStep].label}</Typography>
       </Paper>
-      
+
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -98,22 +100,22 @@ export default function Carousel2() {
       </AutoPlaySwipeableViews>
 
       <MobileStepper
-       variant="dots"
-       steps={5}
-       position="static"
-       activeStep={activeStep}
-       className={classes.root}
-       nextButton={
-         <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
-           
-           {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-         </Button>
-       }
-       backButton={
-         <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-           {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-           
-         </Button>
+        variant="dots"
+        steps={5}
+        position="static"
+        activeStep={activeStep}
+        className={classes.root}
+        nextButton={
+          <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
+
+            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+          </Button>
+        }
+        backButton={
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+
+          </Button>
         }
       />
     </div>

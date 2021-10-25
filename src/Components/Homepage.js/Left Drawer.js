@@ -48,16 +48,16 @@ export default function LeftDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {[ 'Profile', 'Grocery', 'Home & Kitchen', 'Fashion', 'Jwellery'].map((text, index) => (
+        {['Profile', 'Grocery', 'Home & Kitchen', 'Fashion', 'Jwellery'].map((text, index) => (
           <ListItem button key={text}>
-           
+
             <ListItemText primary={text} />
           </ListItem>
         ))}
       </List>
       <Divider />
       <List>
-        {[ 'Beauty', 'Electronics', 'Medicines'].map((text, index) => (
+        {['Beauty', 'Electronics', 'Medicines'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemText primary={text} />
           </ListItem>

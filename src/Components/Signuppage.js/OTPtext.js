@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: '6ch',
+    width: '20%',
   },
 }));
 
@@ -25,35 +25,35 @@ export default function LayoutTextFields() {
         <TextField
           label="OTP"
           id="outlined-margin-normal"
-          defaultValue="*"
+
           className={classes.textField}
           margin="normal"
           variant="outlined"
         />
         <TextField
           id="outlined-margin-normal"
-          defaultValue="*"
+
           className={classes.textField}
           margin="normal"
           variant="outlined"
         />
         <TextField
           id="outlined-margin-normal"
-          defaultValue="*"
+
           className={classes.textField}
           margin="normal"
           variant="outlined"
         />
         <TextField
           id="outlined-margin-normal"
-          defaultValue="*"
+
           className={classes.textField}
           helperText=""
           margin="normal"
           variant="outlined"
-          
+
         />
-       
+
 
       </div>
     </div>

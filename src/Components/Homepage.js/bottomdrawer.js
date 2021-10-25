@@ -1,16 +1,14 @@
 import React from 'react';
 import clsx from 'clsx';
-import { createTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import { Link, Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CreateaccountButtons from './createandloginbutton';
-import Bottomdrawerbutton from './BottomdrawerButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import LoginButtons from './Loginbutton';
 
@@ -28,12 +26,12 @@ const useStyles = makeStyles({
     width: 'auto',
     alignItems: 'center',
 
-    paper: { 
+    paper: {
       alignItems: 'center',
       textAlign: 'center',
     }
-    
-     
+
+
 
   },
 
@@ -78,16 +76,16 @@ export default function TemporaryDrawer() {
           </Grid>
         </Grid>
 
-        
-          <ListItem>
 
-            <Link to={process.env.PUBLIC_URL + '/signup'}>
-              <CreateaccountButtons variant="contained" color='#21DFA8' href="">
-                Create New account
-              </CreateaccountButtons>
-            </Link>
-          </ListItem>
-        
+        <ListItem>
+
+          <Link to={process.env.PUBLIC_URL + '/signup'}>
+            <CreateaccountButtons variant="contained" color='#21DFA8' href="">
+              Create New account
+            </CreateaccountButtons>
+          </Link>
+        </ListItem>
+
       </List>
       <Divider />
 
@@ -114,8 +112,8 @@ export default function TemporaryDrawer() {
 
       {['bottom'].map((anchor) => (
         <React.Fragment key={anchor}>
-         <AccountCircle onClick={toggleDrawer(anchor, true)}>{anchor}</AccountCircle>
- 
+          <AccountCircle onClick={toggleDrawer(anchor, true)}>{anchor}</AccountCircle>
+
 
           <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
             {list(anchor)}

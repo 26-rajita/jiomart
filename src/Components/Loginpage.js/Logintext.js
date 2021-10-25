@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
-      width: '25ch',
+      width: '100%',
     },
   },
 }));
@@ -16,15 +16,15 @@ export default function ColorTextFields() {
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-     
-    <TextField
-        id="outlined-secondary"
+
+      <TextField
+        id="outlined-Primary"
         label="Email ID / Phone number"
         variant="outlined"
         color="secondary"
       />
-     
-      
+
+
     </form>
   );
 }

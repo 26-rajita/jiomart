@@ -67,8 +67,8 @@ export default function LoginButtons() {
   const classes = useStyles();
 
   return (
-    <div class= "text-center">
-      <ColorButton variant="contained" color="primary"  Center Aligned className={classes.margin}>
+    <div class="text-center">
+      <ColorButton variant="contained" color="primary" Center Aligned className={classes.margin}>
         Login
       </ColorButton>
     </div>

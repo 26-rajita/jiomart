@@ -13,6 +13,7 @@ const BootstrapButton = withStyles({
     lineHeight: 1.5,
     backgroundColor: '#07ffd6',
     borderColor: '#0063cc',
+    width: '100ch',
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',
@@ -24,6 +25,7 @@ const BootstrapButton = withStyles({
       '"Apple Color Emoji"',
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
+
     ].join(','),
     '&:hover': {
       backgroundColor: '#21DFA8',
@@ -47,6 +49,7 @@ const ColorButton = withStyles((theme) => ({
     backgroundColor: '#21DFA8',
     '&:hover': {
       backgroundColor: '#21DFA8',
+      width: '100ch'
     },
   },
 }))(Button);
@@ -54,6 +57,8 @@ const ColorButton = withStyles((theme) => ({
 const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(1),
+    width: '100%',
+    height: '100%',
   },
 }));
 
@@ -67,8 +72,8 @@ export default function CreateaccountButtons() {
   const classes = useStyles();
 
   return (
-    <div class= "text-center">
-      <ColorButton variant="contained" color="primary"  Center Aligned className={classes.margin}>
+    <div class="text-center">
+      <ColorButton variant="contained" color="primary" Center Aligned className={classes.margin}>
         Create New Account
       </ColorButton>
     </div>
