@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/jiomart/static/css/main.f800d1b2.chunk.css",
-    "main.js": "/jiomart/static/js/main.613d2097.chunk.js",
-    "main.js.map": "/jiomart/static/js/main.613d2097.chunk.js.map",
+    "main.js": "/jiomart/static/js/main.89710160.chunk.js",
+    "main.js.map": "/jiomart/static/js/main.89710160.chunk.js.map",
     "runtime-main.js": "/jiomart/static/js/runtime-main.69c655b2.js",
     "runtime-main.js.map": "/jiomart/static/js/runtime-main.69c655b2.js.map",
-    "static/js/2.72360f98.chunk.js": "/jiomart/static/js/2.72360f98.chunk.js",
-    "static/js/2.72360f98.chunk.js.map": "/jiomart/static/js/2.72360f98.chunk.js.map",
+    "static/js/2.51fd16c9.chunk.js": "/jiomart/static/js/2.51fd16c9.chunk.js",
+    "static/js/2.51fd16c9.chunk.js.map": "/jiomart/static/js/2.51fd16c9.chunk.js.map",
     "index.html": "/jiomart/index.html",
     "static/css/main.f800d1b2.chunk.css.map": "/jiomart/static/css/main.f800d1b2.chunk.css.map",
-    "static/js/2.72360f98.chunk.js.LICENSE.txt": "/jiomart/static/js/2.72360f98.chunk.js.LICENSE.txt",
+    "static/js/2.51fd16c9.chunk.js.LICENSE.txt": "/jiomart/static/js/2.51fd16c9.chunk.js.LICENSE.txt",
     "static/media/Beauty2.b72aeac3.png": "/jiomart/static/media/Beauty2.b72aeac3.png",
     "static/media/Electronics.d04b75ce.png": "/jiomart/static/media/Electronics.d04b75ce.png",
     "static/media/Fashion.30e19d14.png": "/jiomart/static/media/Fashion.30e19d14.png",
@@ -26,8 +26,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.69c655b2.js",
-    "static/js/2.72360f98.chunk.js",
+    "static/js/2.51fd16c9.chunk.js",
     "static/css/main.f800d1b2.chunk.css",
-    "static/js/main.613d2097.chunk.js"
+    "static/js/main.89710160.chunk.js"
   ]
 }
